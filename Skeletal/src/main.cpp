@@ -136,7 +136,11 @@ void ProcessInput(GLFWwindow* window)
 	}
 }
 
-static void APIENTRY OpenGLErrorCallback(GLenum src, GLenum type, unsigned int id, GLenum severity, int length, const char* msg, const void* userParam)
+static void APIENTRY OpenGLErrorCallback(
+	GLenum src, GLenum type, 
+	unsigned int id, GLenum severity, 
+	int length, const char* msg, 
+	const void* userParam)
 {
 	std::cerr << msg << std::endl;
 	if (severity == GL_DEBUG_SEVERITY_HIGH) {
